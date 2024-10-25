@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Мой сайт</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Добавленные стили */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 200px; /* Увеличили ширину логотипа еще больше */
+            height: 80px; /* Увеличили высоту логотипа еще больше */
+            background-image: url('img/logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+        }
+
+        /* Стили для корзины */
+        .cart {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            margin-left: auto; /* Сдвинем корзину вправо */
+        }
+
+        .cart-icon {
+            font-size: 20px; /* Уменьшили размер иконки корзины */
+        }
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .menu-bar {
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            margin: 3px 0;
+        }
+
+        .hidden-menu {
+            display: none;
+        }
+
+        .hidden-menu.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="products.html">Продукция</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="cart.html" class="cart">
+                <span class="cart-icon">&#128722;</span>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+            </div>
+            <nav class="hidden-menu">
+                <a href="?lang=ru">Русский</a>
+                <a href="?lang=en">English</a>
+                <a href="?lang=de">Deutsch</a>
+                <a href="?lang=uk">Українська</a>
+            </nav>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Продукты</h1>
+            <p>Описание продуктов, которое привлекает внимание.</p>
+            <a href="#">Подробнее</a>
+        </div>
+    </div>
+    <section>
+        <h2>Наша Продукция</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img/product1.jpg" alt="Продукт 1">
+                <h3>Продукт 1</h3>
+                <p>Описание продукта 1.</p>
+            </div>
+            <div class="card">
+                <img src="img/product2.jpg" alt="Продукт 2">
+                <h3>Продукт 2</h3>
+                <p>Описание продукта 2.</p>
+            </div>
+            <div class="card">
+                <img src="img/product3.jpg" alt="Продукт 3">
+                <h3>Продукт 3</h3>
+                <p>Описание продукта 3.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="social-links">
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/telegram.png" alt="Telegram"></a>
+            <a href="#"><img src="img/tiktok.png" alt="TikTok"></a>
+        </div>
+        <div class="legal-info">
+            <p>Все права защищены &copy; 2024</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.hidden-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
