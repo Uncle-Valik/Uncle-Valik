@@ -17,7 +17,7 @@
         }
         header {
             background: #35424a;
-            color: #e6e8eb; /* Более мягкий цвет для заголовка */
+            color: #d4d4dc;
             padding: 10px;
             text-align: center;
             position: sticky;
@@ -26,8 +26,12 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            font-size: 1.5em; /* Уменьшенный размер текста */
+            font-size: 1.4em;
             margin: 10px 0;
+            transition: color 0.3s;
+        }
+        header h1:hover {
+            color: #86d0ff; /* Цвет при наведении */
         }
         nav {
             display: flex;
@@ -41,19 +45,25 @@
             padding: 10px 20px;
             margin: 0 5px;
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
         }
         nav a:hover {
-            background: #46a049;
+            background: #3cbddc; /* Более яркий акцент */
+            transform: translateY(-2px); /* Плавный эффект при наведении */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .content {
             flex: 1;
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .content:hover {
+            background: rgba(255, 255, 255, 1); /* Полная прозрачность при наведении */
         }
         section {
             margin-bottom: 40px;
@@ -116,4 +126,3 @@
     </footer>
 </body>
 </html>
-
