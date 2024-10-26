@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сложный сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #46a049;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на наш сайт!</h1>
+        <nav>
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+    <div class="content">
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы — команда профессионалов, предлагающая широкий спектр услуг для вашего бизнеса.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Пример изображения">
+        </section>
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Консультирование</li>
+                <li>Разработка программного обеспечения</li>
+                <li>Поддержка и обслуживание</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами по электронной почте: <a href="mailto:example@example.com">example@example.com</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Наш сайт. Все права защищены.</p>
+    </footer>
+</body>
+</html>
