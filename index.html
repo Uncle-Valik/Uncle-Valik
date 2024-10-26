@@ -11,20 +11,30 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background: #35424a;
             color: #ffffff;
-            padding: 15px 0;
+            padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav {
-            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
         }
         nav a {
             color: #ffffff;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 10px 20px;
             margin: 0 5px;
             border-radius: 5px;
             transition: background 0.3s;
@@ -33,8 +43,9 @@
             background: #46a049;
         }
         .content {
+            flex: 1;
             max-width: 800px;
-            margin: auto;
+            margin: 20px auto;
             padding: 20px;
             background: #ffffff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -46,27 +57,28 @@
         section img {
             width: 100%;
             border-radius: 8px;
+            object-fit: cover;
+            max-height: 400px;
         }
         footer {
             text-align: center;
             padding: 15px 0;
             background: #35424a;
             color: #ffffff;
-            position: relative;
-            bottom: 0;
             width: 100%;
+            margin-top: auto;
         }
         @media (max-width: 600px) {
             nav {
-                display: flex;
                 flex-direction: column;
-                align-items: center;
+                gap: 5px;
             }
             nav a {
                 margin: 5px 0;
+                padding: 8px 16px;
             }
             .content {
-                padding: 10px;
+                padding: 15px;
             }
         }
     </style>
@@ -87,7 +99,8 @@
             <img src="https://via.placeholder.com/800x400" alt="Пример изображения">
         </section>
         <section id="services">
-        
+            <h2>Услуги</h2>
+            <p>Скоро добавим список наших услуг.</p>
         </section>
         <section id="contact">
             <h2>Контакты</h2>
